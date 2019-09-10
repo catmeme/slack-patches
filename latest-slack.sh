@@ -11,3 +11,4 @@ sed -ie "s@//# sourceMappingURL=ssb-interop.bundle.js.mapdocument.addEventListen
 docker run --rm -it -v $(PWD):/app/ slack-patches/asar pack app.asar.unpacked app2.asar
 sudo cp -v app2.asar /Applications/Slack.app/Contents/Resources/app.asar
 sudo sed -ie 's/"bootSonic":"always"/"bootSonic":"never"/' ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/local-settings.json
+sudo sed -ie 's/"bootSonic":"once"/"bootSonic":"never"/' ~/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application\ Support/Slack/local-settings.json
